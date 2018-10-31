@@ -54,5 +54,24 @@ const prime_numbers = [2,3,5,13];
 prime_numbers.splice(-1,0,7,9);
 console.log(prime_numbers);
 
+// Example 4. slice() : syntax-> arr.slice(start, end). It returns a new array where it copies all items start index "start" to "end" (not including "end").  
+
+let name='ratherImran';
+console.log(name.slice(0,6));// returns rather
+
+
+let nameTwo='ratherImran'; // if we want to start from n we use -1, so last letter has -1
+console.log(nameTwo.slice(-11,-1));// returns ratherImra
+
+// Note: Let's check slice() behaviour on arrays. One use of it is to get the full copied array. Immutability in action.Kind of clone
+
+const books = ['AlFawaid','Lives of Men','Devels Deception'];
+const clonedBooks = books.slice();
+console.log(clonedBooks);
+
+// Till ES6 slice() was used to clone the array. From ES6 we use spread operator. [...books] and that's it! let me show an example
+console.log([...clonedBooks]); // A new array was returned which was the clone of the clonedBooks array!
+
+
 
 
